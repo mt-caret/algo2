@@ -61,6 +61,15 @@ let insertionsort (xs : 'a array) : unit =
 
 let insertionsort_l (xs : 'a list) : 'a list = conv_sort insertionsort xs
 
+let rev_concat (xs : 'a list array) : 'a list =
+  let i = ref ((Array.length xs) - 1) in
+  let ret = ref [] in
+  while !i >= 0 do
+    ret := List.rev_append xs.(!i) !ret;
+    i := !i - 1;
+  done;
+  !ret;;
+
 let radixsort (xs : string array) : unit =
   let n = Array.length xs in
   let index = ref ((Array.map ~f:String.length xs |> Array.fold ~init:1 ~f:max) - 1) in
