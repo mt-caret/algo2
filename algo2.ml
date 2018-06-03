@@ -56,7 +56,8 @@ let run_benchmarks () =
   in
   let
     (*set ~f = List.map ~f:(fun x -> f (x * 1000)) (List.range 10 100)*)
-    set ~f = List.map ~f:(fun x -> f (x * 5000)) (List.range 1 21)
+    set ~f = List.map ~f:(fun x -> f (x * 1000)) (List.range 1 51)
+    (*set ~f = List.map ~f:(fun x -> f (x * 5000)) (List.range 1 21)*)
   in
   let
     benchmarks = List.concat
