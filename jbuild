@@ -1,0 +1,7 @@
+(jbuild_version 1)
+
+(executables
+  ((names (algo2))
+   (libraries (core_kernel core_bench qcheck))
+   (ocamlopt_flags (:standard -O3))
+   ))
